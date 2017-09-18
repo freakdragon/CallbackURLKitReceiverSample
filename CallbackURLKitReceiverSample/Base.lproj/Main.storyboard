@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Receiver-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Receiver" id="BYZ-38-t0r" customClass="ViewController" customModule="InteractiveReceiverTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Success text for send from receiver" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPB-BB-vTn">
+                                <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ao-7d-haV">
+                                <rect key="frame" x="76" y="78" width="222" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send success callback with text">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSuccessCallbackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbB-X6-gQr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agT-VD-QZc">
+                                <rect key="frame" x="76" y="116" width="222" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send failure callback">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonFailureCallbackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhx-xp-h4Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2T-Iz-59b">
+                                <rect key="frame" x="76" y="154" width="222" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send cancel callback">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonCancelCallbackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBr-LC-XZ7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dj-KX-1iB">
+                                <rect key="frame" x="0.0" y="192" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51N-Sv-Fmg">
+                                <rect key="frame" x="93" y="607" width="189" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb1-Zr-01W">
+                                <rect key="frame" x="76" y="221" width="222" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get text from sender">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonGetTextFromSenderAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YMJ-cP-INR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Dj-KX-1iB" secondAttribute="trailing" id="1HH-QL-qYT"/>
+                            <constraint firstAttribute="trailing" secondItem="CPB-BB-vTn" secondAttribute="trailing" id="23R-qn-kle"/>
+                            <constraint firstItem="6Dj-KX-1iB" firstAttribute="top" secondItem="a2T-Iz-59b" secondAttribute="bottom" constant="8" id="4If-wm-AUP"/>
+                            <constraint firstItem="51N-Sv-Fmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7qr-nG-2oc"/>
+                            <constraint firstItem="CPB-BB-vTn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="AW9-63-8UY"/>
+                            <constraint firstItem="6Dj-KX-1iB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HN3-r2-Xos"/>
+                            <constraint firstItem="a2T-Iz-59b" firstAttribute="top" secondItem="agT-VD-QZc" secondAttribute="bottom" constant="8" id="MLv-9i-iLT"/>
+                            <constraint firstItem="Rb1-Zr-01W" firstAttribute="top" secondItem="6Dj-KX-1iB" secondAttribute="bottom" constant="8" id="Mlx-QN-EIS"/>
+                            <constraint firstItem="agT-VD-QZc" firstAttribute="top" secondItem="6ao-7d-haV" secondAttribute="bottom" constant="8" id="TeD-Ze-A3H"/>
+                            <constraint firstItem="6ao-7d-haV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y6u-e3-NcG"/>
+                            <constraint firstItem="a2T-Iz-59b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aX4-Sa-bMY"/>
+                            <constraint firstItem="agT-VD-QZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fX5-3g-7a4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="51N-Sv-Fmg" secondAttribute="bottom" id="hq1-ID-PJG"/>
+                            <constraint firstItem="6ao-7d-haV" firstAttribute="top" secondItem="CPB-BB-vTn" secondAttribute="bottom" constant="8" id="oQ4-MI-0Dh"/>
+                            <constraint firstItem="CPB-BB-vTn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qTs-OK-gv3"/>
+                            <constraint firstItem="Rb1-Zr-01W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xVV-dj-9Ej"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTextFromSender" destination="6Dj-KX-1iB" id="0cn-6G-Uet"/>
+                        <outlet property="textfieldSendSuccessText" destination="CPB-BB-vTn" id="i0p-HR-5dU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
