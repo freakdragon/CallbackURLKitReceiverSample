@@ -1,4 +1,4 @@
-# CallbackURLKitReceiverSample
+# Callback URL Kit Receiver Sample
 
 This is an example of using CallbackURLKit (https://github.com/phimage/CallbackURLKit) when you need your own receiver and sender programs.
 
